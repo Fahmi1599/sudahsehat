@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_width="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:layout_centerInParent="true"
+    android:background="#EFF4fc"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/headerlogin"
+        android:layout_width="@dimen/image_header_dimenpage"
+        android:layout_height="@dimen/image_header_dimenpage"
+        android:src="@drawable/sudahsehat1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailForm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:outlineSpotShadowColor="@color/sudahsehat1"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/sudahsehat1"
+        android:textColorHint="@color/sudahsehat1"
+        app:hintTextColor="@color/sudahsehat1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        app:startIconTint="@color/sudahsehat1"
+        android:layout_marginTop="15dp"
+        android:hint="Masukkan Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerlogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/sudahsehat1"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:outlineSpotShadowColor="@color/sudahsehat1"
+        android:textColorHint="@color/sudahsehat1"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/sudahsehat1"
+        app:hintTextColor="@color/sudahsehat1"
+        app:passwordToggleDrawable="@color/sudahsehat1"
+        android:hint="Masukkan Password"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:endIconTint="@color/sudahsehat1"
+        app:startIconTint="@color/sudahsehat1"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:endIconMode="password_toggle"
+        app:passwordToggleTint="@color/sudahsehat1"
+        app:passwordToggleTintMode="multiply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailForm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getPassword"
+            android:layout_width="match_parent"
+            android:textColor="@color/sudahsehat1"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/shapebox3"
+        android:text="LOGIN"
+        android:textColor="@color/sudahsehat1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordForm"
+        tools:ignore="HardcodedText" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/forgotpasslogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:text="Lupa Password ?"
+        android:textColor="#4f6367"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        app:layout_goneMarginTop="15dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/toregist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:text="Daftar"
+        android:textColor="#4f6367"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

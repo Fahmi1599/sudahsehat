@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_width="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    tools:context=".MainMenu"
+    android:background="#EFF4fc"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/testtest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BoxProfile"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shapebox1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilpic"
+            android:layout_width="196dp"
+            android:layout_height="154dp"
+            android:padding="10dp"
+            android:src="@drawable/post_placeholder1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/editpoto"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/new_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/profilpic"
+            app:layout_constraintEnd_toEndOf="@+id/profilpic"
+            app:layout_constraintHorizontal_bias="0.259"
+            app:layout_constraintStart_toStartOf="@+id/profilpic"
+            app:layout_constraintTop_toTopOf="@+id/profilpic"
+            app:layout_constraintVertical_bias="0.93" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/sudahsehat1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilpic"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/RapidStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Status :"
+            android:textAlignment="center"
+            android:textColor="@color/sudahsehat1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/greeting"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="61dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/statushc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toRightOf="@id/RapidStatus"
+            app:layout_constraintTop_toBottomOf="@+id/greeting"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/sudahsehat1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/DateExpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/sudahsehat1"
+            tools:layout_editor_absoluteX="61dp"
+            android:textSize="18sp"
+            android:text="Masa Berlaku :"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@+id/RapidStatus"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/DateExp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/sudahsehat1"
+            app:layout_constraintLeft_toRightOf="@id/DateExpText"
+            android:textSize="18sp"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@+id/RapidStatus"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/UploadBerkas"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shapebox1"
+        android:text="Upload Berkas Kesehatan Covid-19"
+        android:textColor="@color/sudahsehat1"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BoxProfile" />
+
+    <Button
+        android:id="@+id/QRCodeButton"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:textColor="@color/sudahsehat1"
+
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@drawable/shapebox1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UploadBerkas"
+        android:layout_marginTop="25dp"
+        android:text="Akses QR Code"/>
+
+
+    <Button
+        android:id="@+id/HistoryUser"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shapebox1"
+        android:text="Riwayat Perjalanan "
+        android:textColor="@color/sudahsehat1"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QRCodeButton"
+        app:layout_constraintVertical_bias="0.03" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

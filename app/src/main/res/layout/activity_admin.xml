@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF4fc"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    tools:context=".adminpage.AdminActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BoxProfile"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:background="#EFF4fc"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomeAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Selamat Datang Di Halaman Admin"
+            android:textAlignment="center"
+            android:textColor="@color/sudahsehat1"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/appsudahsehat1"
+            android:layout_width="234dp"
+            android:layout_height="193dp"
+            android:padding="10dp"
+            android:src="@drawable/sudahsehat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeAdmin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BoxProfile"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginTop="50dp">
+
+
+            <Button
+                android:id="@+id/btnuserall"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/shapebox1"
+                android:textColor="@color/sudahsehat1"
+                android:text="Akun Terdaftar"
+                app:layout_constraintEnd_toStartOf="@+id/approvalData"
+                app:layout_constraintHorizontal_bias="0.424"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BoxProfile"
+                tools:ignore="MissingConstraints,NotSibling"></Button>
+
+
+            <ImageView
+                android:id="@+id/btninfo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/sudahsehat1"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginLeft="48dp"
+                android:background="@drawable/shapebox1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.179"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approvalData"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/infoapp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/info"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btninfo"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/btninfo"
+                app:layout_constraintTop_toTopOf="@+id/btninfo"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <Button
+                android:id="@+id/approvalData"
+                android:layout_width="125dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/shapebox1"
+                android:text="Verifikasi Data"
+                android:textColor="@color/sudahsehat1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BoxProfile"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

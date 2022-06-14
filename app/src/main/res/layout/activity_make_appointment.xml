@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFF4fc"
+        tools:context=".HealthCheckReq">
+
+        <ImageView
+            android:id="@+id/header2"
+            android:layout_width="@dimen/image_header_dimenpage"
+            android:layout_height="@dimen/image_header_dimenpage"
+            android:layout_marginTop="84dp"
+            android:src="@drawable/sudahsehat1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_choose1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Klik untuk pilih gambar"
+            android:textColor="@color/sudahsehat1"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/header2"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="5dp" />
+
+
+        <ImageView
+            android:id="@+id/uploadimage1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/post_placeholder1"
+            app:layout_constraintTop_toBottomOf="@id/text_choose1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createPassportFullNameInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:outlineSpotShadowColor="@color/sudahsehat1"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/sudahsehat1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColorHint="@color/sudahsehat1"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/full_name"
+            app:hintTextColor="@color/sudahsehat1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/uploadimage1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createPassportFullNameEditInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sudahsehat1"
+                android:maxLines="1"
+                android:inputType="textCapWords" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createPassportVaccineTypeInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            app:boxBackgroundColor="#EFF4fc"
+            app:boxStrokeColor="@color/sudahsehat1"
+            android:outlineSpotShadowColor="@color/sudahsehat1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="@color/sudahsehat1"
+            app:hintTextColor="@color/sudahsehat1"
+            android:hint="@string/test_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createPassportFullNameInput">
+
+            <AutoCompleteTextView
+                android:id="@+id/createPassportVaccineTypeEditInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="#EFF4fc"
+                android:backgroundTint="#EFF4fc"
+                android:textColor="@color/sudahsehat1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createPassportVaccineDateInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:outlineSpotShadowColor="@color/sudahsehat1"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/sudahsehat1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/sudahsehat1"
+            app:hintTextColor="@color/sudahsehat1"
+            android:hint="@string/start_date"
+            app:layout_constraintEnd_toStartOf="@+id/createPassportImmuneUntilInput"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createPassportVaccineTypeInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createPassportVaccineDateEditInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sudahsehat1"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createPassportImmuneUntilInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:outlineSpotShadowColor="@color/sudahsehat1"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/sudahsehat1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/immune_until"
+            app:hintTextColor="@color/sudahsehat1"
+            android:textColorHint="@color/sudahsehat1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/createPassportVaccineDateInput"
+            app:layout_constraintTop_toBottomOf="@id/createPassportVaccineTypeInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createPassportImmuneUntilEditInput"
+                android:textColor="@color/sudahsehat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/createPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shapebox2"
+            android:textColor="@color/sudahsehat1"
+            android:text="@string/create_passport"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createPassportImmuneUntilInput"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
